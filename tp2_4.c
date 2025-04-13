@@ -1,5 +1,6 @@
 #include <stdio.h>
-
+#include <stdlib.h>
+#include <time.h>
 struct compu {
     int velocidad; // Velocidad de procesamiento en GHz (valor entre 1 y 3)
     int anio; // Año de fabricación (valor entre 2015 y 2024)
@@ -10,6 +11,14 @@ struct compu {
 
 int main()
 {
-    
+    srand(time(NULL));
+    char tipos[6][10] = {"Intel", "AMD", "Celeron", "Athlon", "Core","Pentium"};    
+    int i;    
+    i = rand() % 6;
+    struct compu pc;
+    pc.velocidad = (rand()% 3) + 1; //genera numeros aleatorios de 1 a 3
+    pc.anio = (rand() % (2024 - 2015 + 1)) + 2015;
+    pc.cantidad_nucleos = (rand()% 8) + 1;
+    pc.tipo_cpu = tipos[i];
     return 0;
 }
