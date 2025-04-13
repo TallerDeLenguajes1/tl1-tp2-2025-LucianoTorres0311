@@ -1,0 +1,7 @@
+2f Inspeccione la carpeta donde inicializó el repositorio:
+● ¿Puede ver el archivo tp2_1_2.c? ¿Por qué?
+    No se puede ver el archivo tp2_1_2.c porque estamos parado en la otra rama
+● En VSCode vuelva al “Source Control” ¿Qué diferencias nota?
+    el grafico cambio y ahora muestra la otra rama creada separada de main
+● En VSCode vuelva al “Source Control” vea los cambios, ¿Qué nota?
+    Ahora se muestra como la rama Opcion_2 se unio a la rama main
