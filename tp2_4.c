@@ -25,11 +25,13 @@ int main()
         pcs[j].cantidad_nucleos = (rand()% 8) + 1; //genera numeros entre 1 y 8
         pcs[j].tipo_cpu = tipos[i];
     }
-
+    
+    printf("\n");
     listarPCs(pcs ,CANT);
     printf("\n");
     mostrarMasVieja(pcs, CANT);
-   
+    printf("\n");
+    mostrarMasVeloz(pcs, CANT);
     return 0; 
 }
 
@@ -67,6 +69,29 @@ for (int i = 0; i < cantidad; i++)
         printf("/////////////");
         printf("\n");
         printf("La Pc mas vieja es la numero: %d\n", indice + 1);
+        printf("Anio: %d\n", pcs[indice].anio);
+        printf("Tipo de cpu: %s\n", pcs[indice].tipo_cpu);
+        printf("Velocidad: %d\n", pcs[indice].velocidad);
+        printf("La cantidad de nucleos: %d\n", pcs[indice].cantidad_nucleos);
+        printf("//////////////");
+}
+
+void mostrarMasVeloz(struct compu pcs[], int cantidad){
+int aux = 1;
+int indice;
+    for (int i = 0; i < cantidad; i++)
+    {
+        if (pcs[i].velocidad > aux)
+        {
+        aux = pcs[i].anio;
+        indice = i;
+        }
+    }
+
+        printf("\n");
+        printf("/////////////");
+        printf("\n");
+        printf("La Pc mas veloz es la numero: %d\n", indice + 1);
         printf("Anio: %d\n", pcs[indice].anio);
         printf("Tipo de cpu: %s\n", pcs[indice].tipo_cpu);
         printf("Velocidad: %d\n", pcs[indice].velocidad);
